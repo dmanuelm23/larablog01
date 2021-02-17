@@ -11,8 +11,8 @@
             <h2>¿Deseas eliminar el registro?</h2>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <form id="formDelete" method="POST" action="{{route('post.destroy', 0)}}" data-action="{{route('post.destroy', 0)}}">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+            <form id="formDelete" method="POST" action="{{route('category.destroy', 0)}}" data-action="{{route('category.destroy', 0)}}">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
