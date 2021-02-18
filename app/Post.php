@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Category;
+use App\PostImage;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -9,6 +11,18 @@ class Post extends Model
     protected $fillable = [
         'title',
         'url_clean',
-        'content'
+        'content',
+        'posted',
+        'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function image()
+    {
+        return $this->hasOne(PostImage::class);
+    }
 }

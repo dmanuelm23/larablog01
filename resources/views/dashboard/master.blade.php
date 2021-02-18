@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Módulo administrativo</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/app.js')}}"></script>
 </head>
 <body>
     @include('dashboard.partials.nav-header-main')
@@ -15,6 +14,7 @@
         @include('dashboard.partials.session-flash-status')
         @yield('content')
     </div>
+    <script src="{{asset('js/app.js')}}"></script>
     @yield('scripts')
 </body>
 </html>
