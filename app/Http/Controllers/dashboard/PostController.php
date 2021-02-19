@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
+        $posts = Post::latest()->paginate(25);
         return view('dashboard.post.index', ['posts'=>$posts]);
     }
 
@@ -67,7 +67,7 @@ class PostController extends Controller
     {
         return view('dashboard.post.show',['post'=>$post]);
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *

@@ -27,6 +27,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('list-posts', require('./components/PostListComponent.vue').default);
+
+Vue.component('modal-post', require('./components/PostModalComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
+    data: {
+        message: "Hola Mundo"
+    }
 });
